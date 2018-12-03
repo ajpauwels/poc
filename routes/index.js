@@ -5,7 +5,9 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	res.render('index');
+	const css = 'p { font-size: 18px; }';
+
+	res.render('index', { css });
 });
 
 module.exports = router;
