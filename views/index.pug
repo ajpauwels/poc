@@ -5,4 +5,9 @@ html
 
 	body
 		div.wrapper
-			iframe(src='https://localhost:3000/info/ajpauwels/name')
+			p
+				| Your name is currently: 
+				iframe#nameIframe(src=`https://localhost:3000/info/firstNamespace.name?date=${Date.now()}${css ? '&css=' + css : ''}`, name=Date.now())
+			p
+				| Change your name to be:
+				iframe#nameInputIframe(src=`https://localhost:3000/input/firstNamespace.name?date=${Date.now()}${css ? '&css=' + css : ''}`, name=Date.now())
